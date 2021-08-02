@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./scripts/pdf.js"></script>
+    <script src="./scripts/pdf.worker.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <img src="./resources/safekey.png" alt="Bermuda Government Logo" />
+        <h4>PDF Document to Image Converter</h4>
+      </div>
+      <img
+        id="bm-logo"
+        src="./resources/bm-logo.png"
+        alt="Bermuda Government Logo"
+      />
+    </header>
+    <div id="container">
+      <div id="pdf-main-container">
+        <div id="pdf-loader">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="pdf-contents">
+          <canvas
+            style="display: none !important"
+            id="pdf-canvas"
+            width="600"
+          ></canvas>
+          <div id="page-loader">
+            <div class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              max-width: 600px;
+              flex-wrap: wrap;
+              margin-bottom: 2rem;
+            "
+          >
+            <p
+              id="info-text"
+              style="
+                text-align: center;
+                padding: 1rem 1rem;
+                max-width: 360px;
+                margin: 0 auto;
+                padding-bottom: 1rem;
+                font-weight: 500;
+                width: 100%;
+              "
+            >
+              Select your PDF Document to convert it into an image
+            </p>
+            <a id="download-image" href="#">
+              <img src="./resources/download.svg" alt="download" />
+              Download Image</a
+            >
+            <button id="upload-button">
+              <img id="upload-img" src="./resources/file.svg" alt="download" />
+              <p id="upload-img-text">Select PDF</p>
+            </button>
+            <input type="file" id="file-to-upload" accept="application/pdf" />
+            <div
+              id="return-home-container"
+              style="width: 100%; margin-top: 1.5rem; display: none"
+            >
+              <a id="return-home" href="#">
+                <img
+                  style="width: 18px; height: 18px"
+                  src="./resources/arrow.svg"
+                  alt="go back"
+                />
+                Go back to SafeKey Wallet</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="preload01"></div>
+    <div id="preload02"></div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

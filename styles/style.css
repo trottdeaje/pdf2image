@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#container button {
+  border: 2.5px solid #0d6efd;
+  margin-bottom: 0rem;
+  padding: 0.7rem;
+  padding-right: 1rem;
+  padding-left: 10px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #0d6efd;
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+#container button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn-hover-leave {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 0.5rem;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header div img:nth-child(1) {
+  width: 75px;
+}
+
+header #bm-logo {
+  width: 55px;
+}
+
+#upload-button {
+  width: 165px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+  margin-top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  left: 3px;
+}
+
+#upload-button p {
+  margin: 0;
+}
+
+#file-to-upload {
+  display: none;
+}
+
+#pdf-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+#pdf-loader {
+  display: none;
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+  line-height: 100px;
+  height: 100px;
+}
+
+#pdf-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 400px;
+}
+
+#pdf-meta {
+  overflow: hidden;
+  margin: 0 0 20px 0;
+}
+
+#pdf-buttons {
+  float: left;
+}
+
+#page-count-container {
+  float: right;
+}
+
+#pdf-current-page {
+  display: inline;
+}
+
+#pdf-total-pages {
+  display: inline;
+}
+
+#pdf-canvas {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#page-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: none;
+  color: #999999;
+  font-size: 13px;
+}
+
+#download-image {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 20px auto 0 auto;
+  margin-top: 0;
+  font-size: 13px;
+  text-align: center;
+  border: 2.5px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 0.7rem;
+  padding-right: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  text-decoration: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  right: 3px;
+}
+
+#download-image:hover {
+  background-color: #0d6dfdde;
+  border: 2.5px solid #0d6dfdde;
+}
+
+#download-image img {
+  width: 24px;
+}
+
+#return-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  position: relative;
+  right: 5px;
+}
+
+#return-home:hover {
+  text-decoration: underline;
+}
+
+#return-home img {
+  margin-right: 5px;
+}
+
+.lds-ring {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border: 3px solid white;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #0d6efd transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  #pdf-contents {
+    width: 260px;
+  }
+  #upload-button {
+    margin-bottom: 0.5rem !important;
+  }
+  #bm-logo {
+    width: 40px !important;
+  }
+  #upload-button,
+  #download-image {
+    border-top: 1rem;
+    left: 0px;
+    right: 0px;
+  }
+  #upload-button {
+    top: 12px;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  header h4 {
+    font-size: 14px;
+  }
+}
+
+#preload-01 {
+  background: url("../resources/file.svg") no-repeat -9999px -9999px;
+}
+
+#preload-02 {
+  background: url("../resources/file-white.svg") no-repeat -9999px -9999px;
+}
+/*# sourceMappingURL=style.css.map */
